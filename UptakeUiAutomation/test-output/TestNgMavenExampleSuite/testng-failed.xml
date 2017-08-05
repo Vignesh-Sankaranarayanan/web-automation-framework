@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [TestNgMavenExampleSuite]">
+  <test name="TestNgMavenTest(failed)">
+    <classes>
+      <class name="com.javacodegeeks.testng.maven.TestNgMavenExample">
+        <methods>
+          <include name="exampleOfTestNgMaven"/>
+        </methods>
+      </class> <!-- com.javacodegeeks.testng.maven.TestNgMavenExample -->
+    </classes>
+  </test> <!-- TestNgMavenTest(failed) -->
+</suite> <!-- Failed suite [TestNgMavenExampleSuite] -->

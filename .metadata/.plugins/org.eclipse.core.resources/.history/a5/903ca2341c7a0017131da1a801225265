@@ -1,0 +1,136 @@
+package com.uptake.test;
+
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.ie.InternetExplorerDriver;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Test;
+
+import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+import com.javacodegeeks.testng.flows.Flow00HomePage;
+import com.javacodegeeks.testng.pages.HomePage;
+import com.javacodegeeks.testng.pages.Page01HomePage;
+
+public class UptakeHomePageTest {
+	private WebDriver driver;
+	@BeforeTest
+	public void setup() {
+		try {
+			System.setProperty("webdriver.chrome.driver","C:\\Users\\Vicky and Aish\\Documents\\chromedriver.exe");
+			 ChromeOptions options = new ChromeOptions();
+			    options.addArguments("test-type");
+			    options.addArguments("start-maximized");
+			    options.addArguments("--enable-automation");
+			    options.addArguments("--js-flags=--expose-gc");  
+			    options.addArguments("--enable-precise-memory-info"); 
+			    options.addArguments("test-type=browser");
+			    options.addArguments("disable-infobars");
+			    driver = new ChromeDriver(options);       
+			
+		}catch(Exception e) {
+			System.out.print(e.getMessage());
+			
+		}
+		
+	}
+	
+	@Test
+	public void UptakeHomePageAssertionTest() throws InterruptedException {
+		System.out.println("This is TestNG-Maven Example");
+		driver.get("http://uptake.com");
+		HomePage upTakeHomePage = new HomePage(driver);
+		upTakeHomePage.verifyTitle();
+		upTakeHomePage.verifyContentTitle();
+//		upTakeHomePage.navigateToAboutLine();
+//		upTakeHomePage.VerifyAboutPageTitle();
+		
+	}
+	
+	@AfterTest()
+	public void tearDown() {
+		closeBrowsers();
+	}
+	
+//	
+//		public void TestUserFlow() throws InterruptedException
+//		{
+//			
+//
+//			HomePage page01 = new HomePage(driver);
+//			Flow00HomePage flow00= new Flow00HomePage(page01,driver);
+//			flow00.TestLeftNavigationPage(driver);
+//		
+//	}
+		
+		
+		public void closeBrowsers() {
+			if(driver!=null) {
+				System.out.println("Closing IE browser");
+				driver.quit();
+			}
+		}
+		
+		public void Login() {
+			try {
+				System.setProperty("webdriver.chrome.driver","C:\\Users\\Vicky and Aish\\Documents\\chromedriver.exe");
+				 ChromeOptions options = new ChromeOptions();
+				    options.addArguments("test-type");
+				    options.addArguments("start-maximized");
+				    options.addArguments("--enable-automation");
+				    options.addArguments("--js-flags=--expose-gc");  
+				    options.addArguments("--enable-precise-memory-info"); 
+				    options.addArguments("test-type=browser");
+				    options.addArguments("disable-infobars");
+				    WebDriver driver = new ChromeDriver(options);       
+		    	
+		        String baseUrl = "http://uptake.com";
+		        String expectedTitle = "Analytics for the industrial internet";
+		        String actualTitle = "";
+
+		        // launch Fire fox and direct it to the Base URL
+		        driver.get(baseUrl);
+
+		        // get the actual value of the title
+		        actualTitle = driver.getTitle();
+
+		        /*
+		         * compare the actual title of the page with the expected one and print
+		         * the result as "Passed" or "Failed"
+		         */
+		        if (actualTitle.contentEquals(expectedTitle)){
+		            System.out.println("Test Passed!");
+		        } else {
+		        	System.out.println(actualTitle);
+		            System.out.println("Test Failed");
+		        }
+		       
+		        //close Fire fox
+		        driver.close();
+		       
+		    
+
+	driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+	
+
+//	driver.manage().window().maximize();
+			}
+			catch(Exception ex) {
+				System.out.println(ex.getMessage());
+				
+				
+			}
+}
+
+}
+
+
+

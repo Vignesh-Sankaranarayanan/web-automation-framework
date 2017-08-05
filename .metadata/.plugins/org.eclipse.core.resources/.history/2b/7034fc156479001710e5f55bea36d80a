@@ -1,0 +1,56 @@
+package com.javacodegeeks.testng.maven;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.ie.InternetExplorerDriver;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Test;
+
+import com.javacodegeeks.testng.flows.Flow00HomePage;
+import com.javacodegeeks.testng.pages.Page01HomePage;
+
+public class TestNgMavenSecondClass {
+	private WebDriver driver;
+	@Test
+	public void oneMoreTest() throws InterruptedException {
+		System.out.println("This is TestNG-Maven Second Example");
+		Login();
+		TestUserFlow();
+		closeBrowsers();
+	}
+	
+	public void closeBrowsers() {
+		if(driver!=null) {
+			System.out.println("Closing IE browser");
+			driver.quit();
+		}
+	}
+	
+	
+		public void TestUserFlow() throws InterruptedException
+		{
+			
+			
+			Page01HomePage page01 = new Page01HomePage(driver);
+			Flow00HomePage flow00= new Flow00HomePage(page01,driver);
+			flow00.TestLeftNavigationPage(driver);
+		
+	
+	}
+		
+		
+		public void Login() {
+			String exePath="C:\\Users\\Public\\eclipse-workspace\\testNgMavenExample\\src\\test\\resources\\IEDriverServer.exe";
+			System.out.println("*******************");
+			System.out.println("launching IE browser");
+			System.setProperty("webdriver.ie.driver", exePath);
+			DesiredCapabilities caps = DesiredCapabilities.internetExplorer();
+			caps.setCapability("ignoreZoomSetting", true);
+			driver = new InternetExplorerDriver();
+
+			driver.manage().window().maximize();
+		}
+}
