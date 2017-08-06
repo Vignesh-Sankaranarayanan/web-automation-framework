@@ -1,4 +1,4 @@
-package com.javacodegeeks.testng.flows;
+package com.uptake.flows;
 
 import static org.testng.Assert.assertEquals;
 
@@ -8,8 +8,8 @@ import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.testng.asserts.SoftAssert;
 import org.testng.log4testng.Logger;
 
-import com.javacodegeeks.testng.pages.HomePage;
-import com.javacodegeeks.testng.utilities.SeleniumUtil;
+import com.uptake.pages.*;
+import com.uptake.utilities.*;
 
 public class HomePageFlow {
 	private static final Logger logger = Logger.getLogger(HomePageFlow.class);

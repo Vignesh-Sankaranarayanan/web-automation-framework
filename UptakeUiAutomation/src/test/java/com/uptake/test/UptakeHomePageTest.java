@@ -16,8 +16,10 @@ import org.testng.annotations.Test;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
-import com.javacodegeeks.testng.flows.HomePageFlow;
-import com.javacodegeeks.testng.pages.HomePage;
+import com.uptake.pages.*;
+import com.uptake.flows.*;
+import com.uptake.utilities.*;
+
 
 
 public class UptakeHomePageTest {
@@ -42,16 +44,50 @@ public class UptakeHomePageTest {
 		}
 		
 	}
-	
+	//CommonUtilities.waitUntilURLContainsText(page07.getDriver(), "TAS_ICMA/app");
 	@Test
 	public void UptakeHomePageAssertionTest() throws InterruptedException {
-		System.out.println("This is TestNG-Maven Example");
+		System.out.println("Home Page validation Test");
 		driver.get("http://uptake.com");
 		HomePage upTakeHomePage = new HomePage(driver);
 		upTakeHomePage.verifyTitle();
-		upTakeHomePage.verifyContentTitle();
-//		upTakeHomePage.navigateToAboutLine();
-//		upTakeHomePage.VerifyAboutPageTitle();
+		upTakeHomePage.verifyHomePageSubHeaderContentTitle();
+		upTakeHomePage.navigateToAboutPageButton().click();
+		CommonUtilities.waitUntilURLContainsText(driver, "about");
+		upTakeHomePage.verifyAboutPageTitle();
+		//Navigating back to home page to continue home page validations
+		upTakeHomePage.navigateBack();
+		CommonUtilities.waitUntilURLDOESNTContainsText(driver, "about");
+		upTakeHomePage.verifyBlogPageHeaderInHomePage();
+		upTakeHomePage.verifyBlogPageSubHeaderInHomePage();
+		//Button click to navigate to Blog Page
+		upTakeHomePage.navigateToBlogPageButton().click();
+		CommonUtilities.waitUntilURLContainsText(driver, "blog");
+		upTakeHomePage.verifyBlogPageTitle();
+		//Navigating back to home page to continue home page validations
+		upTakeHomePage.navigateBack();
+		CommonUtilities.waitUntilURLDOESNTContainsText(driver, "blog");
+		//Product page
+		upTakeHomePage.verifyProductPageHeaderInHomePage();
+		upTakeHomePage.verifyProductPageSubHeaderInHomePage();
+		//Button click to navigate to Product Page
+		upTakeHomePage.navigateToProductPageButton().click();
+		CommonUtilities.waitUntilURLContainsText(driver, "products");
+		upTakeHomePage.verifyProuctPageTitle();
+		//Navigating back to home page to continue home page validations
+		upTakeHomePage.navigateBack();
+		CommonUtilities.waitUntilURLDOESNTContainsText(driver, "products");
+		
+		//Careers page
+		upTakeHomePage.verifyCareersPageHeaderInHomePage();
+		upTakeHomePage.verifyCareersPageSubHeaderInHomePage();
+		//Button click to navigate to Careers Page
+		upTakeHomePage.navigateToCareersPageButton().click();
+		CommonUtilities.waitUntilURLContainsText(driver, "careers");
+		upTakeHomePage.verifyCareersPageTitle();
+		//Navigating back to home page to continue home page validations
+		upTakeHomePage.navigateBack();
+		CommonUtilities.waitUntilURLDOESNTContainsText(driver, "careers");
 		
 	}
 	

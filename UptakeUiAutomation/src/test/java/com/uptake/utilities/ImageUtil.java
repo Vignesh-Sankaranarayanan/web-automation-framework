@@ -1,4 +1,4 @@
-package com.javacodegeeks.testng.utilities;
+package com.uptake.utilities;
 
 
 import java.awt.Graphics2D;
@@ -44,7 +44,7 @@ public class ImageUtil {
 	 * Returns a 'binary string' (like. 001010111011100010) which is easy to do a hamming distance on.
 	 *
 	 * @author Sony Li
-	 * @since 2015Ã„Ãª10Ã”Ã‚10ÃˆÃ•-Ã�Ã‚ÃŽÃ§3:34:23
+	 * @since 2015Ãƒâ€žÃƒÂª10Ãƒâ€�Ãƒâ€š10ÃƒË†Ãƒâ€¢-Ãƒï¿½Ãƒâ€šÃƒÅ½ÃƒÂ§3:34:23
 	 *
 	 * @param img the image file
 	 * @return a 'binary string' (like. 001010111011100010)
@@ -180,7 +180,7 @@ public class ImageUtil {
 	 * Compare 2 image file to check if they're the same one
 	 *
 	 * @author Sony Li
-	 * @since 2015Ã„Ãª10Ã”Ã‚10ÃˆÃ•-Ã�Ã‚ÃŽÃ§3:34:23
+	 * @since 2015Ãƒâ€žÃƒÂª10Ãƒâ€�Ãƒâ€š10ÃƒË†Ãƒâ€¢-Ãƒï¿½Ãƒâ€šÃƒÅ½ÃƒÂ§3:34:23
 	 *
 	 * @param image1 the 1st image file
 	 * @param image2 the 2nd image file

@@ -14,8 +14,9 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-import com.javacodegeeks.testng.flows.HomePageFlow;
-import com.javacodegeeks.testng.pages.HomePage;
+import com.uptake.pages.*;
+import com.uptake.flows.*;
+import com.uptake.utilities.*;
 
 public class UptakeAboutPageTest {
 	private WebDriver driver;
@@ -44,13 +45,14 @@ public class UptakeAboutPageTest {
 	
 	@Test
 	public void uptakeAboutPageAssertionTest() throws InterruptedException {
-		System.out.println("This is About Page Test");
-		driver.get("http://uptake.com");
-		HomePage upTakeHomePage = new HomePage(driver);
-		upTakeHomePage.verifyTitle();
-		upTakeHomePage.verifyContentTitle();
-//		upTakeHomePage.navigateToAboutLine();
-//		upTakeHomePage.VerifyAboutPageTitle();
+		System.out.println("About Page validation Test");
+		driver.get("https://uptake.com");
+		AboutPage upTakeAboutPage = new AboutPage(driver);
+		upTakeAboutPage.navigateToAboutPageButton().click();
+		Thread.sleep(1000);
+		upTakeAboutPage.verifyTitle();
+		upTakeAboutPage.verifyAboutPageHeader();
+		
 	}
 	
 	@AfterTest()
