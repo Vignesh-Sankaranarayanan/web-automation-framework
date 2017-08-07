@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="UptakeTestSuite" parallel="false">
+  <test name="UptakeTest">
+    <classes>
+      <class name="com.uptake.test.UptakeAboutPageTest"/>
+      <class name="com.uptake.test.UptakeHomePageTest"/>
+    </classes>
+  </test>
+</suite>
