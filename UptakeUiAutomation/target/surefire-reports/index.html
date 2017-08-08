@@ -37,7 +37,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" class="navigator-link" panel-name="suite-Command_line_suite">
-              <span class="suite-name border-skipped">Command line suite</span>
+              <span class="suite-name border-passed">Command line suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -90,26 +90,26 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">2 methods,  2 skipped,  </span>
+                    <span class="method-stats">2 methods,   2 passed</span>
                   </li>
                   <li>
-                    <span class="method-list-title skipped">Skipped methods</span>
-                    <span class="show-or-hide-methods skipped">
-                      <a href="#" panel-name="suite-Command_line_suite" class="hide-methods skipped suite-Command_line_suite"> (hide)</a> <!-- hide-methods skipped suite-Command_line_suite -->
-                      <a href="#" panel-name="suite-Command_line_suite" class="show-methods skipped suite-Command_line_suite"> (show)</a> <!-- show-methods skipped suite-Command_line_suite -->
+                    <span class="method-list-title passed">Passed methods</span>
+                    <span class="show-or-hide-methods passed">
+                      <a href="#" panel-name="suite-Command_line_suite" class="hide-methods passed suite-Command_line_suite"> (hide)</a> <!-- hide-methods passed suite-Command_line_suite -->
+                      <a href="#" panel-name="suite-Command_line_suite" class="show-methods passed suite-Command_line_suite"> (show)</a> <!-- show-methods passed suite-Command_line_suite -->
                     </span>
-                    <div class="method-list-content skipped suite-Command_line_suite">
+                    <div class="method-list-content passed suite-Command_line_suite">
                       <span>
-                        <img width="3%" src="skipped.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Command_line_suite" title="com.javacodegeeks.testng.maven.TestNgMavenExample" hash-for-method="exampleOfTestNgMaven">exampleOfTestNgMaven</a> <!-- method navigator-link -->
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Command_line_suite" title="com.uptake.test.UptakeHomePageTest" hash-for-method="UptakeHomePageAssertionTest">UptakeHomePageAssertionTest</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
-                        <img width="3%" src="skipped.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Command_line_suite" title="com.javacodegeeks.testng.maven.TestNgMavenSecondClass" hash-for-method="oneMoreTest">oneMoreTest</a> <!-- method navigator-link -->
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Command_line_suite" title="com.uptake.test.UptakeAboutPageTest" hash-for-method="uptakeAboutPageAssertionTest">uptakeAboutPageAssertionTest</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                    </div> <!-- method-list-content skipped suite-Command_line_suite -->
+                    </div> <!-- method-list-content passed suite-Command_line_suite -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -121,36 +121,36 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Command_line_suite" class="panel Command_line_suite">
-          <div class="suite-Command_line_suite-class-skipped">
+          <div class="suite-Command_line_suite-class-passed">
             <div class="main-panel-header rounded-window-top">
-              <img src="skipped.png"/>
-              <span class="class-name">com.javacodegeeks.testng.maven.TestNgMavenExample</span>
+              <img src="passed.png"/>
+              <span class="class-name">com.uptake.test.UptakeHomePageTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="exampleOfTestNgMaven">
-                  </a> <!-- exampleOfTestNgMaven -->
-                  <span class="method-name">exampleOfTestNgMaven</span>
+                  <a name="UptakeHomePageAssertionTest">
+                  </a> <!-- UptakeHomePageAssertionTest -->
+                  <span class="method-name">UptakeHomePageAssertionTest</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Command_line_suite-class-skipped -->
-          <div class="suite-Command_line_suite-class-skipped">
+          </div> <!-- suite-Command_line_suite-class-passed -->
+          <div class="suite-Command_line_suite-class-passed">
             <div class="main-panel-header rounded-window-top">
-              <img src="skipped.png"/>
-              <span class="class-name">com.javacodegeeks.testng.maven.TestNgMavenSecondClass</span>
+              <img src="passed.png"/>
+              <span class="class-name">com.uptake.test.UptakeAboutPageTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="oneMoreTest">
-                  </a> <!-- oneMoreTest -->
-                  <span class="method-name">oneMoreTest</span>
+                  <a name="uptakeAboutPageAssertionTest">
+                  </a> <!-- uptakeAboutPageAssertionTest -->
+                  <span class="method-name">uptakeAboutPageAssertionTest</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Command_line_suite-class-skipped -->
+          </div> <!-- suite-Command_line_suite-class-passed -->
         </div> <!-- panel Command_line_suite -->
         <div panel-name="test-xml-Command_line_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
@@ -162,8 +162,8 @@
 &lt;suite verbose=&quot;0&quot; name=&quot;Command line suite&quot;&gt;
   &lt;test name=&quot;Command line test&quot; preserve-order=&quot;false&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;com.javacodegeeks.testng.maven.TestNgMavenExample&quot;/&gt;
-      &lt;class name=&quot;com.javacodegeeks.testng.maven.TestNgMavenSecondClass&quot;/&gt;
+      &lt;class name=&quot;com.uptake.test.UptakeAboutPageTest&quot;/&gt;
+      &lt;class name=&quot;com.uptake.test.UptakeHomePageTest&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Command line test --&gt;
 &lt;/suite&gt; &lt;!-- Command line suite --&gt;
@@ -205,18 +205,18 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(2);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'exampleOfTestNgMaven')
-data.setCell(0, 2, 'com.javacodegeeks.testng.maven.TestNgMavenExample')
-data.setCell(0, 3, 0);
+data.setCell(0, 1, 'UptakeHomePageAssertionTest')
+data.setCell(0, 2, 'com.uptake.test.UptakeHomePageTest')
+data.setCell(0, 3, 32520);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'oneMoreTest')
-data.setCell(1, 2, 'com.javacodegeeks.testng.maven.TestNgMavenSecondClass')
-data.setCell(1, 3, 0);
+data.setCell(1, 1, 'uptakeAboutPageAssertionTest')
+data.setCell(1, 2, 'com.uptake.test.UptakeAboutPageTest')
+data.setCell(1, 3, 12054);
 window.suiteTableData['Command_line_suite']= { tableData: data, tableDiv: 'times-div-Command_line_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 0 ms</span>
+              <span class="suite-total-time">Total running time: 44 seconds</span>
               <div id="times-div-Command_line_suite">
               </div> <!-- times-div-Command_line_suite -->
             </div> <!-- times-div -->
@@ -242,30 +242,46 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">com.javacodegeeks.testng.maven.TestNgMavenExample</div> <!-- chronological-class-name -->
-              <div class="configuration-class before">
-                <img src="failed.png">
-                </img>
-                <span class="method-name">setUp</span>
+              <div class="chronological-class-name">com.uptake.test.UptakeAboutPageTest</div> <!-- chronological-class-name -->
+              <div class="configuration-test before">
+                <span class="method-name">setup</span>
                 <span class="method-start">0 ms</span>
-              </div> <!-- configuration-class before -->
+              </div> <!-- configuration-test before -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.uptake.test.UptakeHomePageTest</div> <!-- chronological-class-name -->
+              <div class="configuration-test before">
+                <span class="method-name">setup</span>
+                <span class="method-start">4257 ms</span>
+              </div> <!-- configuration-test before -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.uptake.test.UptakeAboutPageTest</div> <!-- chronological-class-name -->
               <div class="test-method">
-                <span class="method-name">exampleOfTestNgMaven</span>
-                <span class="method-start">4610 ms</span>
+                <span class="method-name">uptakeAboutPageAssertionTest</span>
+                <span class="method-start">6922 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
-              <div class="chronological-class-name">com.javacodegeeks.testng.maven.TestNgMavenSecondClass</div> <!-- chronological-class-name -->
-              <div class="configuration-class before">
-                <img src="failed.png">
-                </img>
-                <span class="method-name">setUp</span>
-                <span class="method-start">4611 ms</span>
-              </div> <!-- configuration-class before -->
+              <div class="chronological-class-name">com.uptake.test.UptakeHomePageTest</div> <!-- chronological-class-name -->
               <div class="test-method">
-                <span class="method-name">oneMoreTest</span>
-                <span class="method-start">8624 ms</span>
+                <span class="method-name">UptakeHomePageAssertionTest</span>
+                <span class="method-start">18977 ms</span>
               </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.uptake.test.UptakeAboutPageTest</div> <!-- chronological-class-name -->
+              <div class="configuration-test after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">51498 ms</span>
+              </div> <!-- configuration-test after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.uptake.test.UptakeHomePageTest</div> <!-- chronological-class-name -->
+              <div class="configuration-test after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">53259 ms</span>
+              </div> <!-- configuration-test after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->

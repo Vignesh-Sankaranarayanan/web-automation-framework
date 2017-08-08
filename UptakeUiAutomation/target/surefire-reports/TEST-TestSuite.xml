@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="6" failures="2" name="TestSuite" time="8.916" errors="0" skipped="4">
+<testsuite tests="2" failures="0" name="TestSuite" time="44.575" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_131\jre\bin"/>
     <property name="java.vm.version" value="25.131-b11"/>
     <property name="java.vm.vendor" value="Oracle Corporation"/>
-    <property name="maven.multiModuleProjectDirectory" value="C:\Users\Public\testNgMavenExample\testNgMavenExample"/>
+    <property name="maven.multiModuleProjectDirectory" value="C:\Users\Public\UptakeUiAutomationFramework\UptakeUiAutomation"/>
     <property name="java.vendor.url" value="http://java.oracle.com/"/>
     <property name="path.separator" value=";"/>
     <property name="guice.disable.misplaced.annotation.check" value="true"/>
@@ -16,7 +16,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="sun.os.patch.level" value=""/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
-    <property name="user.dir" value="C:\Users\Public\testNgMavenExample\testNgMavenExample"/>
+    <property name="user.dir" value="C:\Users\Public\UptakeUiAutomationFramework\UptakeUiAutomation"/>
     <property name="java.runtime.version" value="1.8.0_131-b11"/>
     <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
     <property name="java.endorsed.dirs" value="C:\Program Files\Java\jdk1.8.0_131\jre\lib\endorsed"/>
@@ -27,7 +27,7 @@
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="user.variant" value=""/>
     <property name="os.name" value="Windows 10"/>
-    <property name="classworlds.conf" value="C:\Users\Public\testNgMavenExample\.metadata\.plugins\org.eclipse.m2e.launching\launches\m2conf4561165511664097217.tmp"/>
+    <property name="classworlds.conf" value="C:\Users\Public\ws\web-automation\.metadata\.plugins\org.eclipse.m2e.launching\launches\m2conf751499669123339323.tmp"/>
     <property name="sun.jnu.encoding" value="Cp1252"/>
     <property name="java.library.path" value="C:\Program Files\Java\jdk1.8.0_131\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:/Program Files/Java/jre1.8.0_144/bin/server;C:/Program Files/Java/jre1.8.0_144/bin;C:/Program Files/Java/jre1.8.0_144/lib/amd64;C:\ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Java\jdk1.8.0_131\;C:\Program Files\nodejs\;C:\Program Files\PuTTY\;C:\Program Files (x86)\Diffusion Toolkit;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Users\Vicky and Aish\AppData\Local\Microsoft\WindowsApps;C:\Users\Vicky and Aish\AppData\Roaming\npm;C:\Program Files (x86)\Microsoft VS Code\bin;C:\Users\Vicky and Aish\AppData\Local\Google\Cloud SDK\google-cloud-sdk\bin;;C:\WINDOWS\system32;;."/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
@@ -53,7 +53,7 @@
     <property name="java.ext.dirs" value="C:\Program Files\Java\jdk1.8.0_131\jre\lib\ext;C:\WINDOWS\Sun\Java\lib\ext"/>
     <property name="sun.boot.class.path" value="C:\Program Files\Java\jdk1.8.0_131\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_131\jre\lib\rt.jar;C:\Program Files\Java\jdk1.8.0_131\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.8.0_131\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_131\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_131\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_131\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_131\jre\classes"/>
     <property name="java.vendor" value="Oracle Corporation"/>
-    <property name="maven.home" value="C:\Users\Public\testNgMavenExample\testNgMavenExample\EMBEDDED"/>
+    <property name="maven.home" value="C:\Users\Public\UptakeUiAutomationFramework\UptakeUiAutomation\EMBEDDED"/>
     <property name="file.separator" value="\"/>
     <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -61,81 +61,6 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase classname="com.javacodegeeks.testng.maven.TestNgMavenExample" name="setUp" time="4.903">
-    <failure message="Unexpected error launching Internet Explorer. Browser zoom level was set to 125%. It should be set to 100% (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 4.09 seconds
-Build info: version: &apos;2.45.0&apos;, revision: &apos;5017cb8e7ca8e37638dc3091b2440b90a1d8686f&apos;, time: &apos;2015-02-27 09:10:26&apos;
-System info: host: &apos;DESKTOP-8IT2KM8&apos;, ip: &apos;172.28.59.41&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_131&apos;
-Driver info: org.openqa.selenium.ie.InternetExplorerDriver" type="org.openqa.selenium.remote.SessionNotFoundException">org.openqa.selenium.remote.SessionNotFoundException: Unexpected error launching Internet Explorer. Browser zoom level was set to 125%. It should be set to 100% (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 4.09 seconds
-Build info: version: &apos;2.45.0&apos;, revision: &apos;5017cb8e7ca8e37638dc3091b2440b90a1d8686f&apos;, time: &apos;2015-02-27 09:10:26&apos;
-System info: host: &apos;DESKTOP-8IT2KM8&apos;, ip: &apos;172.28.59.41&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_131&apos;
-Driver info: org.openqa.selenium.ie.InternetExplorerDriver
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:204)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:162)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:599)
-	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:240)
-	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:225)
-	at org.openqa.selenium.ie.InternetExplorerDriver.run(InternetExplorerDriver.java:182)
-	at org.openqa.selenium.ie.InternetExplorerDriver.&lt;init&gt;(InternetExplorerDriver.java:174)
-	at org.openqa.selenium.ie.InternetExplorerDriver.&lt;init&gt;(InternetExplorerDriver.java:146)
-	at com.javacodegeeks.testng.maven.TestNgMavenExample.setUp(TestNgMavenExample.java:50)
-</failure>
-    <system-out>Configuring TestNG with: org.apache.maven.surefire.testng.conf.TestNG652Configurator@136432db
-*******************
-launching IE browser
-</system-out>
-    <system-err>Started InternetExplorerDriver server (64-bit)
-2.39.0.0
-Listening on port 27330
-</system-err>
-  </testcase>
-  <testcase classname="com.javacodegeeks.testng.maven.TestNgMavenExample" name="exampleOfTestNgMaven" time="0">
-    <skipped/>
-  </testcase>
-  <testcase classname="com.javacodegeeks.testng.maven.TestNgMavenExample" name="tearDown" time="0">
-    <skipped/>
-  </testcase>
-  <testcase classname="com.javacodegeeks.testng.maven.TestNgMavenSecondClass" name="setUp" time="4.013">
-    <failure message="Unexpected error launching Internet Explorer. Browser zoom level was set to 125%. It should be set to 100% (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 4.00 seconds
-Build info: version: &apos;2.45.0&apos;, revision: &apos;5017cb8e7ca8e37638dc3091b2440b90a1d8686f&apos;, time: &apos;2015-02-27 09:10:26&apos;
-System info: host: &apos;DESKTOP-8IT2KM8&apos;, ip: &apos;172.28.59.41&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_131&apos;
-Driver info: org.openqa.selenium.ie.InternetExplorerDriver" type="org.openqa.selenium.remote.SessionNotFoundException">org.openqa.selenium.remote.SessionNotFoundException: Unexpected error launching Internet Explorer. Browser zoom level was set to 125%. It should be set to 100% (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 4.00 seconds
-Build info: version: &apos;2.45.0&apos;, revision: &apos;5017cb8e7ca8e37638dc3091b2440b90a1d8686f&apos;, time: &apos;2015-02-27 09:10:26&apos;
-System info: host: &apos;DESKTOP-8IT2KM8&apos;, ip: &apos;172.28.59.41&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_131&apos;
-Driver info: org.openqa.selenium.ie.InternetExplorerDriver
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:204)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:162)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:599)
-	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:240)
-	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:225)
-	at org.openqa.selenium.ie.InternetExplorerDriver.run(InternetExplorerDriver.java:182)
-	at org.openqa.selenium.ie.InternetExplorerDriver.&lt;init&gt;(InternetExplorerDriver.java:174)
-	at org.openqa.selenium.ie.InternetExplorerDriver.&lt;init&gt;(InternetExplorerDriver.java:146)
-	at com.javacodegeeks.testng.maven.TestNgMavenSecondClass.setUp(TestNgMavenSecondClass.java:50)
-</failure>
-    <system-out>*******************
-launching IE browser
-</system-out>
-    <system-err>Started InternetExplorerDriver server (64-bit)
-2.39.0.0
-Listening on port 61284
-</system-err>
-  </testcase>
-  <testcase classname="com.javacodegeeks.testng.maven.TestNgMavenSecondClass" name="oneMoreTest" time="0">
-    <skipped/>
-  </testcase>
-  <testcase classname="com.javacodegeeks.testng.maven.TestNgMavenSecondClass" name="tearDown" time="0">
-    <skipped/>
-  </testcase>
+  <testcase classname="com.uptake.test.UptakeAboutPageTest" name="uptakeAboutPageAssertionTest" time="12.057"/>
+  <testcase classname="com.uptake.test.UptakeHomePageTest" name="UptakeHomePageAssertionTest" time="32.518"/>
 </testsuite>

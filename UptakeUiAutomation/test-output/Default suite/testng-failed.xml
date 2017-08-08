@@ -5,9 +5,11 @@
     <classes>
       <class name="com.uptake.test.UptakeHomePageTest">
         <methods>
+          <include name="readPropertiesFile"/>
           <include name="UptakeHomePageAssertionTest"/>
           <include name="setup"/>
           <include name="tearDown"/>
+          <include name="testVideoPlayHomePage"/>
         </methods>
       </class> <!-- com.uptake.test.UptakeHomePageTest -->
     </classes>
