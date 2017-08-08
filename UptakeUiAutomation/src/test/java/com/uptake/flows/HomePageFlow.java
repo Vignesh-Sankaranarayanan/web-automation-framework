@@ -2,10 +2,13 @@ package com.uptake.flows;
 
 import static org.testng.Assert.assertEquals;
 
+import java.util.Properties;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.testng.asserts.SoftAssert;
@@ -19,12 +22,13 @@ public class HomePageFlow {
 	private HomePage page01;
 	private WebDriver driver;
 	private String _testcaseID;
+	private Properties prop= new Properties();
 	private static SoftAssert softAssert = new SoftAssert();
 
-	public HomePageFlow(HomePage page01, WebDriver driver) {
+	public HomePageFlow(HomePage page01, WebDriver driver, Properties prop) {
 		this.page01 = page01;
 		this.driver = driver;
-
+		this.prop=prop;
 	}
 
 	public void testHomePageUptake() {
@@ -32,7 +36,7 @@ public class HomePageFlow {
 			driver.get("http://uptake.com");
 			HomePage upTakeHomePage = new HomePage(driver);
 			upTakeHomePage.verifyTitle();
-			upTakeHomePage.verifyHomePageSubHeaderContentTitle();
+			upTakeHomePage.verifyHomePageSubHeaderContentTitle(prop);
 			upTakeHomePage.navigateToAboutPageButton().click();
 			CommonUtilities.waitUntilURLContainsText(driver, "about");
 			Thread.sleep(3000);
@@ -43,21 +47,16 @@ public class HomePageFlow {
 			// scroll down to blog page
 			upTakeHomePage.clickDownArrow(1);
 			Thread.sleep(5000);
-			upTakeHomePage.verifyBlogPageHeaderInHomePage();
-			upTakeHomePage.verifyBlogPageSubHeaderInHomePage();
+			upTakeHomePage.verifyBlogPageHeaderInHomePage(prop);
+			upTakeHomePage.verifyBlogPageSubHeaderInHomePage(prop);
 			// Button click to navigate to Blog Page
 			// upTakeHomePage.navigateToBlogPageButton().click();
 			Thread.sleep(2000);
-			// upTakeHomePage.verifyBlogPageTitle(driver);
-			// Close blog tab
-			// upTakeHomePage.removeAndChangeTab();
-			// Thread.sleep(2000);
-			// CommonUtilities.waitUntilURLDOESNTContainsText(driver, "blog");
 			// Product page
 			// scroll down to products page
 			upTakeHomePage.clickDownArrow(1);
 			// upTakeHomePage.verifyProductPageHeaderInHomePage();
-			upTakeHomePage.verifyProductPageSubHeaderInHomePage();
+			upTakeHomePage.verifyProductPageSubHeaderInHomePage(prop);
 			// Button click to navigate to Product Page
 			upTakeHomePage.navigateToProductPageButton().click();
 			CommonUtilities.waitUntilURLContainsText(driver, "products");
@@ -75,8 +74,8 @@ public class HomePageFlow {
 			Thread.sleep(1000);
 			upTakeHomePage.clickDownArrow(1);
 			Thread.sleep(1000);
-			upTakeHomePage.verifyCareersPageHeaderInHomePage();
-			upTakeHomePage.verifyCareersPageSubHeaderInHomePage();
+			upTakeHomePage.verifyCareersPageHeaderInHomePage(prop);
+			upTakeHomePage.verifyCareersPageSubHeaderInHomePage(prop);
 			// Button click to navigate to Careers Page
 			upTakeHomePage.navigateToCareersPageButton().click();
 			CommonUtilities.waitUntilURLContainsText(driver, "careers");
@@ -88,6 +87,21 @@ public class HomePageFlow {
 		} catch (InterruptedException Iex) {
 			logger.info("Home Page Test Run is interuppted" + Iex.getMessage());
 		}
+	}
+
+	public void testBackgroundImage() {
+		 driver.get("http://uptake.com");
+		 page01.checkBackGroundImageDisplay();
+	    
+		
+	}
+
+	public void testVideoPlay() {
+		driver.get("http://uptake.com");
+		page01.clickDownArrow(1);
+		page01.checkVideoUrl();
+	    
+		
 	}
 
 }

@@ -1,6 +1,8 @@
 
 package com.uptake.pages;
 
+import java.util.Properties;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -56,10 +58,10 @@ public class AboutPage {
 		Assert.assertEquals(currentPageTitle, "About");
 	}
 
-	public void verifyAboutPageHeader() {
+	public void verifyAboutPageHeader(Properties prop) {
 		String sectionTitle = getAboutPageHeaderContentTitle().getText();
 		Assert.assertEquals(
-				"Uptake is transforming industry with our unrivaled data science and predictive analytics. Monitoring assets in over 94 countries, we power data-driven businesses and deliver greater value to global companies by putting super-charged decision-making power into the hands of our customers.",
+				prop.getProperty("aboutPageSubHeader"),
 				sectionTitle);
 
 	}

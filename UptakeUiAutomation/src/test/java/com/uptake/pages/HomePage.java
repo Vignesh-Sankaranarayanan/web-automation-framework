@@ -1,6 +1,11 @@
 package com.uptake.pages;
 
+import static org.testng.Assert.assertEquals;
+
+import java.util.Properties;
+
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -194,10 +199,10 @@ public class HomePage {
 		Assert.assertEquals(currentPageTitle, "Analytics for the industrial internet");
 	}
 
-	public void verifyHomePageSubHeaderContentTitle() {
+	public void verifyHomePageSubHeaderContentTitle(Properties prop) {
 		String SectionTitle = getHomePageSubHeaderContentTitle().getText();
 		Assert.assertEquals(
-				"Uptake is the actionable insights platform that is challenging what’s possible in industry. It’s time to make the world more productive, safe, secure, and reliable.",
+				prop.getProperty("verifyHomePageSubHeaderContentTitle"),
 				SectionTitle);
 
 	}
@@ -238,7 +243,7 @@ public class HomePage {
 
 	public void verifyCareersPageTitle(WebDriver driver2) {
 		String currentPageTitle = driver2.getTitle();
-		Assert.assertEquals(currentPageTitle, "Careers");
+		Assert.assertEquals(currentPageTitle, "Analytics for the industrial internet");
 	}
 
 	public WebElement navigateToAboutPageButton() {
@@ -276,16 +281,16 @@ public class HomePage {
 				"#home > div.section.fp-section.fp-table.active.fp-completely > div > div.section__content.homeSlide > div > div.hero__subtitle > p"));
 	}
 
-	public void verifyProductPageHeaderInHomePage() {
+	public void verifyProductPageHeaderInHomePage(Properties prop) {
 		String sectionTitle = productPageHeaderinHomePage().getAttribute("innerText");
-		Assert.assertEquals("Turning Data to Value.<br>FAST.", sectionTitle);
+		Assert.assertEquals(prop.getProperty("verifyProductPageHeaderInHomePage"), sectionTitle);
 
 	}
 
-	public void verifyProductPageSubHeaderInHomePage() {
+	public void verifyProductPageSubHeaderInHomePage(Properties prop) {
 		String sectionTitle = productPageSubHeaderinHomePage().getText();
 		Assert.assertEquals(
-				"Uptake can deploy a new data science model in under an hour, delivering value to our customers FAST. Can your platform do that?",
+				prop.getProperty("verifyProductPageSubHeaderInHomePage"),
 				sectionTitle);
 
 	}
@@ -295,16 +300,16 @@ public class HomePage {
 				"#home > div.section.video.fp-section.fp-table.active.fp-completely > div > div.section__content.homeSlide > div > div > div.col-4_md-5_sm-12 > div.hero__subtitle > p"));
 	}
 
-	public void verifyBlogPageHeaderInHomePage() {
+	public void verifyBlogPageHeaderInHomePage(Properties prop) {
 		String sectionTitle = blogPageHeaderinHomePage().getText();
-		Assert.assertEquals("Transforming the Way the World Works", sectionTitle);
+		Assert.assertEquals(prop.getProperty("verifyBlogPageHeaderInHomePage"), sectionTitle);
 
 	}
 
-	public void verifyBlogPageSubHeaderInHomePage() {
+	public void verifyBlogPageSubHeaderInHomePage(Properties prop) {
 		String sectionTitle = blogPageSubHeaderinHomePage().getText();
 		Assert.assertEquals(
-				"Uptake is proud to be named a 2017 Technology Pioneer by the World Economic Forum. See how we are driving value for major industries like energy, construction, aviation, rail, and manufacturing.",
+				prop.getProperty("verifyBlogPageSubHeaderInHomePage"),
 				sectionTitle);
 
 	}
@@ -324,18 +329,32 @@ public class HomePage {
 				"#home > div.section.fp-section.fp-table.active.fp-completely > div > div.section__content.homeSlide > div > div.hero__subtitle > p"));
 	}
 
-	public void verifyCareersPageHeaderInHomePage() {
+	public void verifyCareersPageHeaderInHomePage(Properties prop) {
 		String sectionTitle = careersPageHeaderinHomePage().getAttribute("innerText");
-		Assert.assertEquals("Powered by Our People", sectionTitle);
+		Assert.assertEquals(prop.getProperty("verifyCareersPageHeaderInHomePage"), sectionTitle);
 
 	}
 
-	public void verifyCareersPageSubHeaderInHomePage() {
+	public void verifyCareersPageSubHeaderInHomePage(Properties prop) {
 		String sectionTitle = careersPageSubHeaderinHomePage().getText();
 		Assert.assertEquals(
-				"We’re a company of Makers and Builders. We’re tackling the core challenges at the intersection of technology and industry. Think you have what it takes? Join our team.",
+				prop.getProperty("verifyCareersPageSubHeaderInHomePage"),
 				sectionTitle);
 
+	}
+
+	public void checkBackGroundImageDisplay() {
+		WebElement img = driver.findElement(By.cssSelector("#home > div.section.fp-section.fp-table.active.fp-completely"));
+	    assertEquals("background-image: url(\"//images.contentful.com/bcg1pqabsyt6/5DGx5xciIw6iMekIKaQW4i/e7937bfec2b2ade08837b1df543a9af4/WindEnergy_KeyVisual_Large-02.png\"); height: 759px;", img.getAttribute("style"));
+		
+	}
+
+	public void checkVideoUrl() {
+		WebElement video = driver.findElement(By.xpath("//*[@id=\"home\"]/div[2]/div/div[1]/div/div/div[2]/div/iframe"));
+		assertEquals("https://player.vimeo.com/video/220837336", video.getAttribute("src"));
+		
+		
+		
 	}
 
 }

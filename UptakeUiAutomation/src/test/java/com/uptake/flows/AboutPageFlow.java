@@ -1,5 +1,7 @@
 package com.uptake.flows;
 
+import java.util.Properties;
+
 import org.openqa.selenium.WebDriver;
 import org.testng.asserts.SoftAssert;
 import org.testng.log4testng.Logger;
@@ -21,7 +23,7 @@ public class AboutPageFlow {
 
 	}
 
-	public void testAboutPageUptake() {
+	public void testAboutPageUptake(Properties prop) {
 		try {
 			driver.get("https://uptake.com");
 			AboutPage upTakeAboutPage = new AboutPage(driver);
@@ -29,7 +31,7 @@ public class AboutPageFlow {
 			CommonUtilities.waitUntilURLContainsText(driver, "about");
 			Thread.sleep(1000);
 			upTakeAboutPage.verifyTitle(driver);
-			upTakeAboutPage.verifyAboutPageHeader();
+			upTakeAboutPage.verifyAboutPageHeader(prop);
 			// navigate tp products page
 			upTakeAboutPage.navigateToProductsPage().click();
 			CommonUtilities.waitUntilURLContainsText(driver, "products");

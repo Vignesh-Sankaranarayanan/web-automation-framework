@@ -1,5 +1,10 @@
 package com.uptake.test;
 
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
@@ -21,6 +26,7 @@ import com.uptake.utilities.*;
 
 public class UptakeAboutPageTest {
 	private WebDriver driver;
+	Properties prop = new Properties();
 	private static final Logger logger = Logger.getLogger(UptakeAboutPageTest.class);
 
 	@BeforeTest
@@ -43,6 +49,27 @@ public class UptakeAboutPageTest {
 		}
 
 	}
+	
+	@BeforeTest
+	public void readPropertiesFile() {
+		
+		File file = new File("src\\test\\java\\com\\uptake\\testdata\\data.properties");
+		  
+		FileInputStream fileInput = null;
+		try {
+			fileInput = new FileInputStream(file);
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		}
+		
+		
+		//load properties file
+		try {
+			prop.load(fileInput);
+		} catch (IOException e) {
+			logger.info(e.getMessage());
+		}
+	}
 
 	@Test
 	public void uptakeAboutPageAssertionTest() throws InterruptedException {
@@ -50,7 +77,7 @@ public class UptakeAboutPageTest {
 		logger.info("Navigate to About and Other pages in the Uptake Site");
 		AboutPage abtPage= new AboutPage(driver);
 		AboutPageFlow abtFlow= new AboutPageFlow(abtPage, driver);
-		abtFlow.testAboutPageUptake();
+		abtFlow.testAboutPageUptake(prop);
 
 
 	}
