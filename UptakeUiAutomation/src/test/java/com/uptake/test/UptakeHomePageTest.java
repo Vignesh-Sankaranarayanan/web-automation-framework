@@ -89,7 +89,7 @@ public class UptakeHomePageTest {
 	
 	//Test to check if the video  in the website can be played
 	@Test
-	public void testVideoPlayHomePage(){
+	public void testVideoPlayHomePage() throws InterruptedException{
 		logger.info("Play video in home page Test started");
 		HomePage hmePage= new HomePage(driver);
 		HomePageFlow homeFlow= new 	HomePageFlow(hmePage, driver,prop);
@@ -109,7 +109,7 @@ public class UptakeHomePageTest {
 	@AfterTest()
 	public void tearDown() {
 		if(driver!=null) {
-			logger.info("Closing IE browser");
+			logger.info("Closing browser");
 			driver.quit();
 		}
 	}

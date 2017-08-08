@@ -19,8 +19,11 @@ public class AboutPage {
 		this.driver = driverNew;
 	}
 
-	WebElement getAboutPageHeaderContentTitle() {
-		return SeleniumUtil.waitForElementVisible(driver, By.cssSelector(".hero__subtitle"));
+	WebElement getAboutPageHeaderContentTitle(Properties prop) {
+		// return SeleniumUtil.waitForElementVisible(driver,
+		// By.cssSelector(".hero__subtitle"));
+		return SeleniumUtil.waitForElementVisible(driver, By.cssSelector(".hero__subtitle"),
+				prop.getProperty("aboutPageSubHeader"));
 	}
 
 	public WebElement navigateToAboutPageButton() {
@@ -53,16 +56,15 @@ public class AboutPage {
 				By.cssSelector("#header > div.navbar.centered-content > nav > a:nth-child(6)"));
 	}
 
-	public void verifyTitle(WebDriver driver2) {
-		String currentPageTitle = driver2.getTitle();
+	public void verifyTitle(WebDriver driver) {
+		SeleniumUtil.waitForPageToLoad(driver);
+		String currentPageTitle = driver.getTitle();
 		Assert.assertEquals(currentPageTitle, "About");
 	}
 
 	public void verifyAboutPageHeader(Properties prop) {
-		String sectionTitle = getAboutPageHeaderContentTitle().getText();
-		Assert.assertEquals(
-				prop.getProperty("aboutPageSubHeader"),
-				sectionTitle);
+		String sectionTitle = getAboutPageHeaderContentTitle(prop).getText();
+		Assert.assertEquals(prop.getProperty("aboutPageSubHeader"), sectionTitle);
 
 	}
 }

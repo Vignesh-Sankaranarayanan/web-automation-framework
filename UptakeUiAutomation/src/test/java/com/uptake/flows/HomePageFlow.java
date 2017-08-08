@@ -19,89 +19,80 @@ import com.uptake.utilities.*;
 
 public class HomePageFlow {
 	private static final Logger logger = Logger.getLogger(HomePageFlow.class);
-	private HomePage page01;
+	private HomePage homePage;
 	private WebDriver driver;
-	private String _testcaseID;
-	private Properties prop= new Properties();
-	private static SoftAssert softAssert = new SoftAssert();
+	private Properties prop = new Properties();
 
-	public HomePageFlow(HomePage page01, WebDriver driver, Properties prop) {
-		this.page01 = page01;
+	public HomePageFlow(HomePage homePageObj, WebDriver driver, Properties prop) {
+		this.homePage = homePageObj;
 		this.driver = driver;
-		this.prop=prop;
+		this.prop = prop;
 	}
 
 	public void testHomePageUptake() {
 		try {
-			driver.get("http://uptake.com");
+			driver.get(prop.getProperty("url"));
 			HomePage upTakeHomePage = new HomePage(driver);
 			upTakeHomePage.verifyTitle();
 			upTakeHomePage.verifyHomePageSubHeaderContentTitle(prop);
 			upTakeHomePage.navigateToAboutPageButton().click();
 			CommonUtilities.waitUntilURLContainsText(driver, "about");
-			Thread.sleep(3000);
+			Thread.sleep(1000);
 			upTakeHomePage.verifyAboutPageTitle(driver);
 			// Navigating back to home page to continue home page validations
 			upTakeHomePage.navigateBack();
 			CommonUtilities.waitUntilURLDOESNTContainsText(driver, "about");
 			// scroll down to blog page
 			upTakeHomePage.clickDownArrow(1);
-			Thread.sleep(5000);
+			Thread.sleep(1000);
 			upTakeHomePage.verifyBlogPageHeaderInHomePage(prop);
 			upTakeHomePage.verifyBlogPageSubHeaderInHomePage(prop);
 			// Button click to navigate to Blog Page
 			// upTakeHomePage.navigateToBlogPageButton().click();
-			Thread.sleep(2000);
 			// Product page
 			// scroll down to products page
 			upTakeHomePage.clickDownArrow(1);
 			// upTakeHomePage.verifyProductPageHeaderInHomePage();
+			Thread.sleep(1000);
 			upTakeHomePage.verifyProductPageSubHeaderInHomePage(prop);
 			// Button click to navigate to Product Page
 			upTakeHomePage.navigateToProductPageButton().click();
 			CommonUtilities.waitUntilURLContainsText(driver, "products");
-			Thread.sleep(3000);
+			Thread.sleep(1000);
 			upTakeHomePage.verifyProuctPageTitle(driver);
 			// Navigating back to home page to continue home page validations
 			upTakeHomePage.navigateBack();
 			CommonUtilities.waitUntilURLDOESNTContainsText(driver, "products");
-
 			// Careers page
 			// scroll down to careers page
-			upTakeHomePage.clickDownArrow(1);
-			Thread.sleep(1000);
-			upTakeHomePage.clickDownArrow(1);
-			Thread.sleep(1000);
-			upTakeHomePage.clickDownArrow(1);
+			upTakeHomePage.clickDownArrow(3);
 			Thread.sleep(1000);
 			upTakeHomePage.verifyCareersPageHeaderInHomePage(prop);
 			upTakeHomePage.verifyCareersPageSubHeaderInHomePage(prop);
 			// Button click to navigate to Careers Page
 			upTakeHomePage.navigateToCareersPageButton().click();
 			CommonUtilities.waitUntilURLContainsText(driver, "careers");
-			Thread.sleep(3000);
+			Thread.sleep(1000);
 			upTakeHomePage.verifyCareersPageTitle(driver);
 			// Navigating back to home page to continue home page validations
 			upTakeHomePage.navigateBack();
 			CommonUtilities.waitUntilURLDOESNTContainsText(driver, "careers");
-		} catch (InterruptedException Iex) {
+		} catch (Exception Iex) {
 			logger.info("Home Page Test Run is interuppted" + Iex.getMessage());
 		}
 	}
 
 	public void testBackgroundImage() {
-		 driver.get("http://uptake.com");
-		 page01.checkBackGroundImageDisplay();
-	    
-		
+		driver.get(prop.getProperty("url"));
+		homePage.checkBackGroundImageDisplay(prop);
+
 	}
 
-	public void testVideoPlay() {
-		driver.get("http://uptake.com");
-		page01.clickDownArrow(1);
-		page01.checkVideoUrl();
-	    
-		
+	public void testVideoPlay() throws InterruptedException {
+		driver.get(prop.getProperty("url"));
+		homePage.clickDownArrow(1);
+		homePage.checkVideoUrl(prop);
+
 	}
 
 }

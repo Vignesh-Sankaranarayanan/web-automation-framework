@@ -9,45 +9,41 @@ import org.testng.log4testng.Logger;
 import com.uptake.pages.AboutPage;
 import com.uptake.pages.HomePage;
 import com.uptake.utilities.CommonUtilities;
+import com.uptake.utilities.SeleniumUtil;
 
 public class AboutPageFlow {
 	private static final Logger logger = Logger.getLogger(AboutPageFlow.class);
-	private AboutPage page01;
+	private AboutPage aboutPage;
 	private WebDriver driver;
 	private String _testcaseID;
 	private static SoftAssert softAssert = new SoftAssert();
 
-	public AboutPageFlow(AboutPage page01, WebDriver driver) {
-		this.page01 = page01;
+	public AboutPageFlow(AboutPage aboutPageObj, WebDriver driver) {
+		this.aboutPage = aboutPageObj;
 		this.driver = driver;
 
 	}
 
 	public void testAboutPageUptake(Properties prop) {
 		try {
-			driver.get("https://uptake.com");
+			driver.get(prop.getProperty("url"));
 			AboutPage upTakeAboutPage = new AboutPage(driver);
 			upTakeAboutPage.navigateToAboutPageButton().click();
 			CommonUtilities.waitUntilURLContainsText(driver, "about");
-			Thread.sleep(1000);
-			upTakeAboutPage.verifyTitle(driver);
+			Thread.sleep(2000);
 			upTakeAboutPage.verifyAboutPageHeader(prop);
+			upTakeAboutPage.verifyTitle(driver);
 			// navigate tp products page
 			upTakeAboutPage.navigateToProductsPage().click();
 			CommonUtilities.waitUntilURLContainsText(driver, "products");
-			Thread.sleep(1000);
-
 			// navigate tp industries page
 			upTakeAboutPage.navigateToIndustriesPage().click();
 			CommonUtilities.waitUntilURLContainsText(driver, "industries");
-			Thread.sleep(1000);
-
 			// navigate to Newsroom page
 			upTakeAboutPage.navigateToNewsroomPage().click();
 			CommonUtilities.waitUntilURLContainsText(driver, "newsroom");
-			Thread.sleep(1000);
 
-		} catch (InterruptedException Iex) {
+		} catch (Exception Iex) {
 			logger.info("About Page Test Run is interuppted" + Iex.getMessage());
 		}
 	}

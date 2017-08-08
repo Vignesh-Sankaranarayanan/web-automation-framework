@@ -32,38 +32,37 @@ public class UptakeAboutPageTest {
 	@BeforeTest
 	public void setup() {
 		try {
-			System.setProperty("webdriver.chrome.driver","src\\test\\resources\\config\\chromedriver.exe");
+			System.setProperty("webdriver.chrome.driver", "src\\test\\resources\\config\\chromedriver.exe");
 			ChromeOptions options = new ChromeOptions();
 			options.addArguments("test-type");
 			options.addArguments("start-maximized");
 			options.addArguments("--enable-automation");
-			options.addArguments("--js-flags=--expose-gc");  
-			options.addArguments("--enable-precise-memory-info"); 
+			options.addArguments("--js-flags=--expose-gc");
+			options.addArguments("--enable-precise-memory-info");
 			options.addArguments("test-type=browser");
 			options.addArguments("disable-infobars");
-			driver = new ChromeDriver(options);       
+			driver = new ChromeDriver(options);
 
-		}catch(Exception e) {
+		} catch (Exception e) {
 			logger.info(e.getMessage());
 
 		}
 
 	}
-	
+
 	@BeforeTest
 	public void readPropertiesFile() {
-		
+
 		File file = new File("src\\test\\java\\com\\uptake\\testdata\\data.properties");
-		  
+
 		FileInputStream fileInput = null;
 		try {
 			fileInput = new FileInputStream(file);
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 		}
-		
-		
-		//load properties file
+
+		// load properties file
 		try {
 			prop.load(fileInput);
 		} catch (IOException e) {
@@ -75,17 +74,17 @@ public class UptakeAboutPageTest {
 	public void uptakeAboutPageAssertionTest() throws InterruptedException {
 		logger.info("About Page validation Test");
 		logger.info("Navigate to About and Other pages in the Uptake Site");
-		AboutPage abtPage= new AboutPage(driver);
-		AboutPageFlow abtFlow= new AboutPageFlow(abtPage, driver);
+		AboutPage abtPage = new AboutPage(driver);
+		AboutPageFlow abtFlow = new AboutPageFlow(abtPage, driver);
 		abtFlow.testAboutPageUptake(prop);
-
 
 	}
 
 	@AfterTest()
 	public void tearDown() {
-		if(driver!=null) {
-			logger.info("Closing IE browser");
+		if (driver != null) {
+			logger.info("Closing browser");
 			driver.quit();
 		}
-	}}
+	}
+}

@@ -201,9 +201,7 @@ public class HomePage {
 
 	public void verifyHomePageSubHeaderContentTitle(Properties prop) {
 		String SectionTitle = getHomePageSubHeaderContentTitle().getText();
-		Assert.assertEquals(
-				prop.getProperty("verifyHomePageSubHeaderContentTitle"),
-				SectionTitle);
+		Assert.assertEquals(prop.getProperty("HomePageSubHeaderContentTitle"), SectionTitle);
 
 	}
 
@@ -212,10 +210,13 @@ public class HomePage {
 				By.cssSelector("#header > div.navbar.centered-content > nav > a:nth-child(1)"));
 	}
 
-	public void clickDownArrow(int i) {
+	public void clickDownArrow(int i) throws InterruptedException {
+
 		while (i > 0) {
 			driver.findElement(By.cssSelector("body")).sendKeys(Keys.ARROW_DOWN);
 			i--;
+			SeleniumUtil.waitForPageToLoad(driver);
+			Thread.sleep(1000);
 		}
 	}
 
@@ -227,21 +228,25 @@ public class HomePage {
 	}
 
 	public void verifyAboutPageTitle(WebDriver driver2) {
+		SeleniumUtil.waitForPageToLoad(driver2);
 		String currentPageTitle = driver2.getTitle();
 		Assert.assertEquals(currentPageTitle, "About");
 	}
 
 	public void verifyBlogPageTitle(WebDriver driver2) {
+		SeleniumUtil.waitForPageToLoad(driver2);
 		String currentPageTitle = driver2.getTitle();
 		Assert.assertEquals(currentPageTitle, "Uptake Named Technology Pioneer By World Economic Forum - Update Blog");
 	}
 
 	public void verifyProuctPageTitle(WebDriver driver2) {
+		SeleniumUtil.waitForPageToLoad(driver2);
 		String currentPageTitle = driver2.getTitle();
 		Assert.assertEquals(currentPageTitle, "Products");
 	}
 
 	public void verifyCareersPageTitle(WebDriver driver2) {
+		SeleniumUtil.waitForPageToLoad(driver2);
 		String currentPageTitle = driver2.getTitle();
 		Assert.assertEquals(currentPageTitle, "Analytics for the industrial internet");
 	}
@@ -283,15 +288,13 @@ public class HomePage {
 
 	public void verifyProductPageHeaderInHomePage(Properties prop) {
 		String sectionTitle = productPageHeaderinHomePage().getAttribute("innerText");
-		Assert.assertEquals(prop.getProperty("verifyProductPageHeaderInHomePage"), sectionTitle);
+		Assert.assertEquals(prop.getProperty("ProductPageHeaderInHomePage"), sectionTitle);
 
 	}
 
 	public void verifyProductPageSubHeaderInHomePage(Properties prop) {
 		String sectionTitle = productPageSubHeaderinHomePage().getText();
-		Assert.assertEquals(
-				prop.getProperty("verifyProductPageSubHeaderInHomePage"),
-				sectionTitle);
+		Assert.assertEquals(prop.getProperty("ProductPageSubHeaderInHomePage"), sectionTitle);
 
 	}
 
@@ -301,16 +304,16 @@ public class HomePage {
 	}
 
 	public void verifyBlogPageHeaderInHomePage(Properties prop) {
+		SeleniumUtil.waitForPageToLoad(driver);
 		String sectionTitle = blogPageHeaderinHomePage().getText();
-		Assert.assertEquals(prop.getProperty("verifyBlogPageHeaderInHomePage"), sectionTitle);
+		Assert.assertEquals(prop.getProperty("BlogPageHeaderInHomePage"), sectionTitle);
 
 	}
 
 	public void verifyBlogPageSubHeaderInHomePage(Properties prop) {
+		SeleniumUtil.waitForPageToLoad(driver);
 		String sectionTitle = blogPageSubHeaderinHomePage().getText();
-		Assert.assertEquals(
-				prop.getProperty("verifyBlogPageSubHeaderInHomePage"),
-				sectionTitle);
+		Assert.assertEquals(prop.getProperty("BlogPageSubHeaderInHomePage"), sectionTitle);
 
 	}
 
@@ -330,31 +333,31 @@ public class HomePage {
 	}
 
 	public void verifyCareersPageHeaderInHomePage(Properties prop) {
+		SeleniumUtil.waitForPageToLoad(driver);
 		String sectionTitle = careersPageHeaderinHomePage().getAttribute("innerText");
-		Assert.assertEquals(prop.getProperty("verifyCareersPageHeaderInHomePage"), sectionTitle);
+		Assert.assertEquals(prop.getProperty("CareersPageHeaderInHomePage"), sectionTitle);
 
 	}
 
 	public void verifyCareersPageSubHeaderInHomePage(Properties prop) {
+		SeleniumUtil.waitForPageToLoad(driver);
 		String sectionTitle = careersPageSubHeaderinHomePage().getText();
-		Assert.assertEquals(
-				prop.getProperty("verifyCareersPageSubHeaderInHomePage"),
-				sectionTitle);
+		Assert.assertEquals(prop.getProperty("CareersPageSubHeaderInHomePage"), sectionTitle);
 
 	}
 
-	public void checkBackGroundImageDisplay() {
-		WebElement img = driver.findElement(By.cssSelector("#home > div.section.fp-section.fp-table.active.fp-completely"));
-	    assertEquals("background-image: url(\"//images.contentful.com/bcg1pqabsyt6/5DGx5xciIw6iMekIKaQW4i/e7937bfec2b2ade08837b1df543a9af4/WindEnergy_KeyVisual_Large-02.png\"); height: 759px;", img.getAttribute("style"));
-		
+	public void checkBackGroundImageDisplay(Properties prop) {
+		WebElement img = driver
+				.findElement(By.cssSelector("#home > div.section.fp-section.fp-table.active.fp-completely"));
+		assertEquals(prop.getProperty("backgroundImageCheck"), img.getAttribute("style"));
+
 	}
 
-	public void checkVideoUrl() {
-		WebElement video = driver.findElement(By.xpath("//*[@id=\"home\"]/div[2]/div/div[1]/div/div/div[2]/div/iframe"));
-		assertEquals("https://player.vimeo.com/video/220837336", video.getAttribute("src"));
-		
-		
-		
+	public void checkVideoUrl(Properties prop) {
+		WebElement video = driver
+				.findElement(By.xpath("//*[@id=\"home\"]/div[2]/div/div[1]/div/div/div[2]/div/iframe"));
+		assertEquals(prop.getProperty("checkVideoUrl"), video.getAttribute("src"));
+
 	}
 
 }

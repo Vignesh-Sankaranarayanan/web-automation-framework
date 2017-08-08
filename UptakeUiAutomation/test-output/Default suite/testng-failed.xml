@@ -9,7 +9,6 @@
           <include name="UptakeHomePageAssertionTest"/>
           <include name="setup"/>
           <include name="tearDown"/>
-          <include name="testVideoPlayHomePage"/>
         </methods>
       </class> <!-- com.uptake.test.UptakeHomePageTest -->
     </classes>

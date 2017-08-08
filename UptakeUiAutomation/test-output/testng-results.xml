@@ -2,50 +2,50 @@
 <testng-results skipped="0" failed="0" total="4" passed="4">
   <reporter-output>
   </reporter-output>
-  <suite name="UptakeTestSuite" duration-ms="58787" started-at="2017-08-08T10:47:54Z" finished-at="2017-08-08T10:48:53Z">
+  <suite name="UptakeTestSuite" duration-ms="43735" started-at="2017-08-08T21:57:37Z" finished-at="2017-08-08T21:58:21Z">
     <groups>
     </groups>
-    <test name="UptakeTest" duration-ms="58787" started-at="2017-08-08T10:47:54Z" finished-at="2017-08-08T10:48:53Z">
+    <test name="UptakeTest" duration-ms="43735" started-at="2017-08-08T21:57:37Z" finished-at="2017-08-08T21:58:21Z">
       <class name="com.uptake.test.UptakeAboutPageTest">
-        <test-method status="PASS" signature="readPropertiesFile()[pri:0, instance:com.uptake.test.UptakeAboutPageTest@55f3ddb1]" name="readPropertiesFile" is-config="true" duration-ms="10" started-at="2017-08-08T05:47:54Z" finished-at="2017-08-08T05:47:54Z">
+        <test-method status="PASS" signature="readPropertiesFile()[pri:0, instance:com.uptake.test.UptakeAboutPageTest@55f3ddb1]" name="readPropertiesFile" is-config="true" duration-ms="12" started-at="2017-08-08T16:57:37Z" finished-at="2017-08-08T16:57:37Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- readPropertiesFile -->
-        <test-method status="PASS" signature="setup()[pri:0, instance:com.uptake.test.UptakeAboutPageTest@55f3ddb1]" name="setup" is-config="true" duration-ms="3589" started-at="2017-08-08T05:47:54Z" finished-at="2017-08-08T05:47:58Z">
+        <test-method status="PASS" signature="setup()[pri:0, instance:com.uptake.test.UptakeAboutPageTest@55f3ddb1]" name="setup" is-config="true" duration-ms="3500" started-at="2017-08-08T16:57:37Z" finished-at="2017-08-08T16:57:40Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="readPropertiesFile()[pri:0, instance:com.uptake.test.UptakeHomePageTest@3ffc5af1]" name="readPropertiesFile" is-config="true" duration-ms="1" started-at="2017-08-08T05:47:58Z" finished-at="2017-08-08T05:47:58Z">
+        <test-method status="PASS" signature="setup()[pri:0, instance:com.uptake.test.UptakeHomePageTest@3ffc5af1]" name="setup" is-config="true" duration-ms="2169" started-at="2017-08-08T16:57:40Z" finished-at="2017-08-08T16:57:43Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="readPropertiesFile()[pri:0, instance:com.uptake.test.UptakeHomePageTest@3ffc5af1]" name="readPropertiesFile" is-config="true" duration-ms="0" started-at="2017-08-08T16:57:40Z" finished-at="2017-08-08T16:57:40Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- readPropertiesFile -->
-        <test-method status="PASS" signature="setup()[pri:0, instance:com.uptake.test.UptakeHomePageTest@3ffc5af1]" name="setup" is-config="true" duration-ms="2633" started-at="2017-08-08T05:47:58Z" finished-at="2017-08-08T05:48:00Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method status="PASS" signature="uptakeAboutPageAssertionTest()[pri:0, instance:com.uptake.test.UptakeAboutPageTest@55f3ddb1]" name="uptakeAboutPageAssertionTest" duration-ms="10272" started-at="2017-08-08T05:48:00Z" finished-at="2017-08-08T05:48:10Z">
+        <test-method status="PASS" signature="uptakeAboutPageAssertionTest()[pri:0, instance:com.uptake.test.UptakeAboutPageTest@55f3ddb1]" name="uptakeAboutPageAssertionTest" duration-ms="9755" started-at="2017-08-08T16:57:43Z" finished-at="2017-08-08T16:57:52Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- uptakeAboutPageAssertionTest -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.uptake.test.UptakeAboutPageTest@55f3ddb1]" name="tearDown" is-config="true" duration-ms="1870" started-at="2017-08-08T05:48:49Z" finished-at="2017-08-08T05:48:51Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.uptake.test.UptakeAboutPageTest@55f3ddb1]" name="tearDown" is-config="true" duration-ms="1838" started-at="2017-08-08T16:58:17Z" finished-at="2017-08-08T16:58:19Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.uptake.test.UptakeHomePageTest@3ffc5af1]" name="tearDown" is-config="true" duration-ms="1609" started-at="2017-08-08T05:48:51Z" finished-at="2017-08-08T05:48:53Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.uptake.test.UptakeHomePageTest@3ffc5af1]" name="tearDown" is-config="true" duration-ms="1629" started-at="2017-08-08T16:58:19Z" finished-at="2017-08-08T16:58:21Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- com.uptake.test.UptakeAboutPageTest -->
       <class name="com.uptake.test.UptakeHomePageTest">
-        <test-method status="PASS" signature="UptakeHomePageAssertionTest()[pri:0, instance:com.uptake.test.UptakeHomePageTest@3ffc5af1]" name="UptakeHomePageAssertionTest" duration-ms="31395" started-at="2017-08-08T05:48:10Z" finished-at="2017-08-08T05:48:42Z">
+        <test-method status="PASS" signature="UptakeHomePageAssertionTest()[pri:0, instance:com.uptake.test.UptakeHomePageTest@3ffc5af1]" name="UptakeHomePageAssertionTest" duration-ms="20894" started-at="2017-08-08T16:57:52Z" finished-at="2017-08-08T16:58:13Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- UptakeHomePageAssertionTest -->
-        <test-method status="PASS" signature="testBackGroundImagePresent()[pri:0, instance:com.uptake.test.UptakeHomePageTest@3ffc5af1]" name="testBackGroundImagePresent" duration-ms="6279" started-at="2017-08-08T05:48:42Z" finished-at="2017-08-08T05:48:48Z">
+        <test-method status="PASS" signature="testBackGroundImagePresent()[pri:0, instance:com.uptake.test.UptakeHomePageTest@3ffc5af1]" name="testBackGroundImagePresent" duration-ms="1564" started-at="2017-08-08T16:58:13Z" finished-at="2017-08-08T16:58:15Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testBackGroundImagePresent -->
-        <test-method status="PASS" signature="testVideoPlayHomePage()[pri:0, instance:com.uptake.test.UptakeHomePageTest@3ffc5af1]" name="testVideoPlayHomePage" duration-ms="1115" started-at="2017-08-08T05:48:48Z" finished-at="2017-08-08T05:48:49Z">
+        <test-method status="PASS" signature="testVideoPlayHomePage()[pri:0, instance:com.uptake.test.UptakeHomePageTest@3ffc5af1]" name="testVideoPlayHomePage" duration-ms="2354" started-at="2017-08-08T16:58:15Z" finished-at="2017-08-08T16:58:17Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testVideoPlayHomePage -->

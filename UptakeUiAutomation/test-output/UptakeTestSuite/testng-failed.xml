@@ -12,7 +12,9 @@
       </class> <!-- com.uptake.test.UptakeAboutPageTest -->
       <class name="com.uptake.test.UptakeHomePageTest">
         <methods>
+          <include name="testBackGroundImagePresent"/>
           <include name="readPropertiesFile"/>
+          <include name="UptakeHomePageAssertionTest"/>
           <include name="setup"/>
           <include name="tearDown"/>
           <include name="testVideoPlayHomePage"/>
