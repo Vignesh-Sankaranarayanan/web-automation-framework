@@ -1,15 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Default suite]">
-  <test name="Default test(failed)">
+<suite name="Failed suite [UptakeTestSuite]">
+  <test name="UptakeTest(failed)">
     <classes>
-      <class name="com.uptake.test.UptakeHomePageTest">
+      <class name="com.uptake.test.UptakeAboutPageTest">
         <methods>
-          <include name="UptakeHomePageAssertionTest"/>
           <include name="setup"/>
           <include name="tearDown"/>
+          <include name="readPropertiesFile"/>
+        </methods>
+      </class> <!-- com.uptake.test.UptakeAboutPageTest -->
+      <class name="com.uptake.test.UptakeHomePageTest">
+        <methods>
+          <include name="readPropertiesFile"/>
+          <include name="setup"/>
+          <include name="tearDown"/>
+          <include name="testVideoPlayHomePage"/>
         </methods>
       </class> <!-- com.uptake.test.UptakeHomePageTest -->
     </classes>
-  </test> <!-- Default test(failed) -->
-</suite> <!-- Failed suite [Default suite] -->
+  </test> <!-- UptakeTest(failed) -->
+</suite> <!-- Failed suite [UptakeTestSuite] -->

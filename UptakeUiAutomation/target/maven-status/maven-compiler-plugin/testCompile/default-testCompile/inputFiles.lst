@@ -1,7 +1,10 @@
-C:\Users\Public\testNgMavenExample\testNgMavenExample\src\test\java\com\javacodegeeks\testng\utilities\ImageUtil.java
-C:\Users\Public\testNgMavenExample\testNgMavenExample\src\test\java\com\javacodegeeks\testng\flows\Flow00HomePage.java
-C:\Users\Public\testNgMavenExample\testNgMavenExample\src\test\java\com\javacodegeeks\testng\pages\Page01HomePage.java
-C:\Users\Public\testNgMavenExample\testNgMavenExample\src\test\java\com\javacodegeeks\testng\maven\TestNgMavenSecondClass.java
-C:\Users\Public\testNgMavenExample\testNgMavenExample\src\test\java\com\javacodegeeks\testng\utilities\Environment.java
-C:\Users\Public\testNgMavenExample\testNgMavenExample\src\test\java\com\javacodegeeks\testng\utilities\SeleniumUtil.java
-C:\Users\Public\testNgMavenExample\testNgMavenExample\src\test\java\com\javacodegeeks\testng\maven\TestNgMavenExample.java
+C:\Users\Public\UptakeUiAutomationFramework\UptakeUiAutomation\src\test\java\com\uptake\flows\HomePageFlow.java
+C:\Users\Public\UptakeUiAutomationFramework\UptakeUiAutomation\src\test\java\com\uptake\utilities\SeleniumUtil.java
+C:\Users\Public\UptakeUiAutomationFramework\UptakeUiAutomation\src\test\java\com\uptake\flows\AboutPageFlow.java
+C:\Users\Public\UptakeUiAutomationFramework\UptakeUiAutomation\src\test\java\com\uptake\pages\HomePage.java
+C:\Users\Public\UptakeUiAutomationFramework\UptakeUiAutomation\src\test\java\com\uptake\pages\AboutPage.java
+C:\Users\Public\UptakeUiAutomationFramework\UptakeUiAutomation\src\test\java\com\uptake\utilities\ImageUtil.java
+C:\Users\Public\UptakeUiAutomationFramework\UptakeUiAutomation\src\test\java\com\uptake\utilities\Environment.java
+C:\Users\Public\UptakeUiAutomationFramework\UptakeUiAutomation\src\test\java\com\uptake\test\UptakeAboutPageTest.java
+C:\Users\Public\UptakeUiAutomationFramework\UptakeUiAutomation\src\test\java\com\uptake\test\UptakeHomePageTest.java
+C:\Users\Public\UptakeUiAutomationFramework\UptakeUiAutomation\src\test\java\com\uptake\utilities\CommonUtilities.java

@@ -1,65 +1,55 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="1" total="1" passed="0">
+<testng-results skipped="0" failed="0" total="4" passed="4">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="10393" started-at="2017-08-06T12:23:36Z" finished-at="2017-08-06T12:23:46Z">
+  <suite name="UptakeTestSuite" duration-ms="58787" started-at="2017-08-08T10:47:54Z" finished-at="2017-08-08T10:48:53Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="10393" started-at="2017-08-06T12:23:36Z" finished-at="2017-08-06T12:23:46Z">
-      <class name="com.uptake.test.UptakeHomePageTest">
-        <test-method status="PASS" signature="setup()[pri:0, instance:com.uptake.test.UptakeHomePageTest@55f3ddb1]" name="setup" is-config="true" duration-ms="2649" started-at="2017-08-06T07:23:36Z" finished-at="2017-08-06T07:23:38Z">
+    <test name="UptakeTest" duration-ms="58787" started-at="2017-08-08T10:47:54Z" finished-at="2017-08-08T10:48:53Z">
+      <class name="com.uptake.test.UptakeAboutPageTest">
+        <test-method status="PASS" signature="readPropertiesFile()[pri:0, instance:com.uptake.test.UptakeAboutPageTest@55f3ddb1]" name="readPropertiesFile" is-config="true" duration-ms="10" started-at="2017-08-08T05:47:54Z" finished-at="2017-08-08T05:47:54Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- readPropertiesFile -->
+        <test-method status="PASS" signature="setup()[pri:0, instance:com.uptake.test.UptakeAboutPageTest@55f3ddb1]" name="setup" is-config="true" duration-ms="3589" started-at="2017-08-08T05:47:54Z" finished-at="2017-08-08T05:47:58Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="FAIL" signature="UptakeHomePageAssertionTest()[pri:0, instance:com.uptake.test.UptakeHomePageTest@55f3ddb1]" name="UptakeHomePageAssertionTest" duration-ms="5986" started-at="2017-08-06T07:23:38Z" finished-at="2017-08-06T07:23:44Z">
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[expected [About] but found [Analytics for the industrial internet]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [About] but found [Analytics for the industrial internet]
-	at org.testng.Assert.fail(Assert.java:94)
-	at org.testng.Assert.failNotEquals(Assert.java:494)
-	at org.testng.Assert.assertEquals(Assert.java:123)
-	at org.testng.Assert.assertEquals(Assert.java:176)
-	at org.testng.Assert.assertEquals(Assert.java:186)
-	at com.javacodegeeks.testng.pages.HomePage.verifyAboutPageTitle(HomePage.java:208)
-	at com.uptake.test.UptakeHomePageTest.UptakeHomePageAssertionTest(UptakeHomePageTest.java:56)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at org.testng.TestRunner.privateRun(TestRunner.java:767)
-	at org.testng.TestRunner.run(TestRunner.java:617)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:348)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:343)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:305)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:254)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
-	at org.testng.TestNG.run(TestNG.java:1057)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:230)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:76)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
+        <test-method status="PASS" signature="readPropertiesFile()[pri:0, instance:com.uptake.test.UptakeHomePageTest@3ffc5af1]" name="readPropertiesFile" is-config="true" duration-ms="1" started-at="2017-08-08T05:47:58Z" finished-at="2017-08-08T05:47:58Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- UptakeHomePageAssertionTest -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.uptake.test.UptakeHomePageTest@55f3ddb1]" name="tearDown" is-config="true" duration-ms="1744" started-at="2017-08-06T07:23:44Z" finished-at="2017-08-06T07:23:46Z">
+        </test-method> <!-- readPropertiesFile -->
+        <test-method status="PASS" signature="setup()[pri:0, instance:com.uptake.test.UptakeHomePageTest@3ffc5af1]" name="setup" is-config="true" duration-ms="2633" started-at="2017-08-08T05:47:58Z" finished-at="2017-08-08T05:48:00Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="uptakeAboutPageAssertionTest()[pri:0, instance:com.uptake.test.UptakeAboutPageTest@55f3ddb1]" name="uptakeAboutPageAssertionTest" duration-ms="10272" started-at="2017-08-08T05:48:00Z" finished-at="2017-08-08T05:48:10Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- uptakeAboutPageAssertionTest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.uptake.test.UptakeAboutPageTest@55f3ddb1]" name="tearDown" is-config="true" duration-ms="1870" started-at="2017-08-08T05:48:49Z" finished-at="2017-08-08T05:48:51Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.uptake.test.UptakeHomePageTest@3ffc5af1]" name="tearDown" is-config="true" duration-ms="1609" started-at="2017-08-08T05:48:51Z" finished-at="2017-08-08T05:48:53Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.uptake.test.UptakeAboutPageTest -->
+      <class name="com.uptake.test.UptakeHomePageTest">
+        <test-method status="PASS" signature="UptakeHomePageAssertionTest()[pri:0, instance:com.uptake.test.UptakeHomePageTest@3ffc5af1]" name="UptakeHomePageAssertionTest" duration-ms="31395" started-at="2017-08-08T05:48:10Z" finished-at="2017-08-08T05:48:42Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- UptakeHomePageAssertionTest -->
+        <test-method status="PASS" signature="testBackGroundImagePresent()[pri:0, instance:com.uptake.test.UptakeHomePageTest@3ffc5af1]" name="testBackGroundImagePresent" duration-ms="6279" started-at="2017-08-08T05:48:42Z" finished-at="2017-08-08T05:48:48Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testBackGroundImagePresent -->
+        <test-method status="PASS" signature="testVideoPlayHomePage()[pri:0, instance:com.uptake.test.UptakeHomePageTest@3ffc5af1]" name="testVideoPlayHomePage" duration-ms="1115" started-at="2017-08-08T05:48:48Z" finished-at="2017-08-08T05:48:49Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testVideoPlayHomePage -->
       </class> <!-- com.uptake.test.UptakeHomePageTest -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+    </test> <!-- UptakeTest -->
+  </suite> <!-- UptakeTestSuite -->
 </testng-results>
